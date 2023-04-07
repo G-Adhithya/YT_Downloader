@@ -1,17 +1,22 @@
 # **YouTube Downloader**
 
-This is a YouTube downloader created using Tkinter, CustomTkinter, and PyTube
+This is a YouTube Downloader GUI app made in Python 3 and changes can be made by downloading the file along with the following modules installed with the following commands.
 
-## Downloading the app:
+> pip install pytube
 
-Just open the **"App"** folder and enjoy!
+This helps in downloading the YouTube video.
 
-## Modifying the app:
+> pip install customtkinter
 
-Feel free to make any changes to the app, by modifying the "app.py".
+Helps in creating the GUI for the app.
 
-If you wish to modify the app, copy and paste the following commands in your command prompt after the installation of Python 3. (or above)
+## BUGS:
 
-> pip install tkinter <br>
-> pip install customtkinter <br>
-> pip install pytube <br>
+There are currently no bugs. ;)
+
+Run the app using:
+
+> python app.py
+
+Download the final app with this link: https://www.mediafire.com/file/a9ogts2j0x8y60a/YouTube_Downloader.exe/file
+(**.EXE** format)
