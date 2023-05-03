@@ -16,16 +16,18 @@ app.resizable(False, False)
 def download():
     try:
         yt_link = link.get()
-        ytObj = YouTube(yt_link, on_progress_callback=progress)
+        ytObj = YouTube(yt_link, on_progress_callback=progress,
+                        use_oauth=True, allow_oauth_cache=True)
         video = ytObj.streams.get_highest_resolution()
         video.download("./Videos")
 
         finishLabel.configure(
             text="The video has been downloaded successfully!", text_color="white")
 
-    except:
+    except ConnectionAbortedError as e:
         finishLabel.configure(
             text="Please check the link and try again", text_color="red")
+        print(e)
 
 
 def progress(stream, chunk, bytes_remaining):
@@ -38,6 +40,7 @@ def progress(stream, chunk, bytes_remaining):
     percentage.update()
 
     pBar.set(float(completed_percentage) / 100)
+
 
     # Label
 title = customtkinter.CTkLabel(
